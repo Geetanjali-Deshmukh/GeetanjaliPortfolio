@@ -18,3 +18,47 @@ section {
   margin: 20px 0;
   border-radius: 8px;
 }
+
+
+/* Smooth page fade-in */
+body {
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section slide-up animation */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover animation for buttons/links */
+a:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Card hover effect */
+section:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}

@@ -5,11 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Geetanjali | .NET Full Stack Developer</title>
 <link rel="stylesheet" href="style.css">
+
+<script>
+  const text = "Geetanjali Deshmukh";
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 80);
+    }
+  }
+
+  window.onload = typeEffect;
+</script>
+
+
 </head>
 <body>
 
 <header>
-  <h1>Geetanjali Deshmukh</h1>
+  <!-- <h1>Geetanjali Deshmukh</h1> -->
+   
+   <h1 id="typing"></h1>
+
   <p>.NET Full Stack Developer | Software Engineer</p>
   <a href="resume.pdf" download>Download Resume</a>
 </header>
@@ -17,7 +37,7 @@
 <section>
   <h2>About Me</h2>
   <p>
-    Software Developer with 3+ years experience in ASP.NET, .NET Core, Web API, SQL Server, and JavaScript.
+    Software Developer with 3+ years experience in ASP.NET,  Web API, SQL Server, and JavaScript.
     I build scalable, high-performance web applications and optimize systems for reliability and speed.
   </p>
 </section>
@@ -25,7 +45,7 @@
 <section>
   <h2>Technical Skills</h2>
   <ul>
-    <li>C#, ASP.NET, .NET Core, Web API</li>
+    <li>C#, ASP.NET, Web API</li>
     <li>SQL Server, Query Optimization, SSRS</li>
     <li>HTML, CSS, JavaScript, AJAX</li>
     <li>REST API, Microservices, Clean Architecture</li>
