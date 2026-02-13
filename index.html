@@ -2,104 +2,668 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!-- <title>Geetanjali | .NET Full Stack Developer</title> -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Geetanjali | .NET Full Stack Developer</title>
+<meta name="description" content="Geetanjali Deshmukh - .NET Full Stack Developer Portfolio">
+<meta name="keywords" content=".NET Developer, ASP.NET Core, SQL Server, Full Stack Developer">
+<title>Geetanjali Deshmukh Potfolio</title>
+
 <link rel="stylesheet" href="style.css">
 
 <script>
-  const text = "Geetanjali Deshmukh";
-  let i = 0;
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
 
-  function typeEffect() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeEffect, 80);
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const visiblePoint = 100;
+
+      if (elementTop < windowHeight - visiblePoint) {
+        reveals[i].classList.add("active");
+      }
     }
   }
 
-  window.onload = typeEffect;
+  window.addEventListener("scroll", revealOnScroll);
 </script>
+
 
 
 </head>
 <body>
+  <div id="progressBar"></div>
 
-<header>
-  <!-- <h1>Geetanjali Deshmukh</h1> -->
-   
-   <h1 id="typing"></h1>
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-  <p>.NET Full Stack Developer | Software Engineer</p>
-  <a href="resume.pdf" download>Download Resume</a>
-</header>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#tech">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#certifications">Certifications</a>
+    </div>
 
-<section>
+    <button onclick="toggleTheme()" id="themeBtn">🌙</button>
+    
+  </nav>
+  
+
+<section id="home" class="reveal hero">
+  <h1>Geetanjali Deshmukh</h1>
+  <h2><span id="typing"></span></h2>
+  <p>.NET Full Stack Developer | Building Scalable Applications</p>
+  
+  <!-- <a href="resume.pdf" download class="resumeBtn">Download Resume</a> -->
+
+</section>
+
+
+<section id="about" class="reveal">
   <h2>About Me</h2>
+
   <p>
-    Software Developer with 3+ years experience in ASP.NET,  Web API, SQL Server, and JavaScript.
-    I build scalable, high-performance web applications and optimize systems for reliability and speed.
+    I am a passionate and detail-oriented .NET Full-Stack Developer with strong experience in building secure, scalable, and performance-driven web applications. I specialize in ASP.NET, C#, SQL Server, and full-stack development, with hands-on experience in government portal systems and enterprise applications. I focus on writing clean, maintainable code and designing systems that are secure, optimized, and user-friendly. My goal is to continuously grow as a developer and contribute to impactful software solutions.
+  </p>
+
+  <p>
+    Currently focused on building robust enterprise and product-level software
+    with clean architecture, performance optimization, and scalable database design.
   </p>
 </section>
 
-<section>
-  <h2>Technical Skills</h2>
-  <ul>
-    <li>C#, ASP.NET, Web API</li>
-    <li>SQL Server, Query Optimization, SSRS</li>
-    <li>HTML, CSS, JavaScript, AJAX</li>
-    <li>REST API, Microservices, Clean Architecture</li>
-  </ul>
+
+<section id="tech" class="reveal">
+  <h2>Tech Stack</h2>
+
+  <div class="tech-grid">
+    <div>HTML5</div>
+    <div>.NET</div>
+    <div>ASP.NET</div>
+    <div>C#</div>
+    <div>SQL Server</div>
+    <div>Entity Framework</div>
+    <div>JavaScript</div>
+    <!-- <div>React</div>
+    <div>REST API</div> -->
+    <div>GitHub</div>
+    <div>Microservices</div>
+    <div>MySQL</div>
+    <div>Database Design</div>
+  </div>
 </section>
 
-<section>
+
+
+
+
+<section class="elite-section">
+  <div class="elite-container">
+
+    <h2 class="elite-title">Software Developer — MPOnline Limited</h2>
+    <p class="elite-subtitle">
+      Building high-performance, secure, and scalable enterprise-grade government systems.
+    </p>
+
+    <div class="elite-grid">
+
+      <div class="elite-card">
+        <h3>Security-First Development</h3>
+        <p>
+          Developed secure government portal modules using ASP.NET with robust
+          authentication, authorization, and data protection aligned with secure coding standards.
+        </p>
+      </div>
+
+      <div class="elite-card">
+        <h3>Database & Performance Engineering</h3>
+        <p>
+          Optimized complex SQL Server queries, stored procedures, and indexing strategies,
+          reducing latency and improving system performance under heavy user load.
+        </p>
+      </div>
+
+      <div class="elite-card">
+        <h3>Scalable Architecture</h3>
+        <p>
+          Designed layered, maintainable, and scalable architecture capable of handling
+          high-volume traffic, concurrent users, and future system expansion.
+        </p>
+      </div>
+
+      <div class="elite-card">
+        <h3>Performance Optimization</h3>
+        <p>
+          Implemented caching, query tuning, and execution plan optimization to enhance
+          response time, throughput, and overall application efficiency.
+        </p>
+      </div>
+
+      <div class="elite-card">
+        <h3>Secure Access Control</h3>
+        <p>
+          Strengthened application security with role-based access control, input validation,
+          and secure development practices for mission-critical systems.
+        </p>
+      </div>
+
+      <div class="elite-card">
+        <h3>Reliability & Monitoring</h3>
+        <p>
+          Identified and resolved performance bottlenecks through debugging, monitoring,
+          and profiling to ensure stable, reliable production performance.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="projects" class="reveal">
   <h2>Projects</h2>
 
-  <h3>Government Service Portal</h3>
-  <p>Developed ASP.NET modules, improved performance, integrated APIs, ensured high reliability.</p>
+  <div class="project"
+    onclick="openModal(
+    'Online Movie Streaming App', '',
+    'PHP, HTML, CSS and MySQL',
+    'Designed backend, implemented authentication and optimized queries.',
+    'Developed a web-based movie streaming platform using the Laravel framework that enables users to watch free movies and web series seamlessly. Implemented user authentication and authorization to ensure secure access and personalized viewing experiences. Designed and developed content categorization, advanced search, and filtering features to improve content discoverability. Integrated video streaming functionality for smooth playback with minimal buffering. Created a responsive and intuitive user interface optimized for both desktop and mobile devices. Focused on performance optimization, database efficiency, and scalable architecture to handle multiple concurrent users effectively.',
+    )">
+      <h3>Online Movie Streaming App</h3>
+      <p>Full-stack OTT platform with secure login, optimized performance and smooth streaming.</p>
+  </div>
 
-  <h3>SSRS Reporting System</h3>
-  <p>Created dynamic dashboards and automated reporting for real-time business insights.</p>
 
-  <h3>Online Movie Streaming App</h3>
-  <p>Full-stack platform with authentication, filtering, and optimized database queries.</p>
-
-  <h3>Student Management System</h3>
-  <p>Python + MySQL desktop application with full CRUD and data validation.</p>
+  <div class="project"
+    onclick="openModal(
+    'Student Management System', '',
+    'Python and MySQL',
+    'Designed frontend, backend, implemented authentication and optimized queries.',    
+    'Developed a Student Management System to efficiently manage student records, academic data, and administrative operations. The application provides a centralized platform for managing student information, course details, attendance, and performance with secure authentication and role-based access. The system focuses on data accuracy, performance optimization, and user-friendly interface, enabling institutions to streamline daily academic and administrative workflows.'
+    )">
+      <h3>Student Management System</h3>
+      <p>Python + MySQL application with full CRUD and data validation.</p>
+  </div>
 
 </section>
 
-<!-- <section>
-  <h2>Contact</h2>
-  <p>Email: dgeetanjali848@gmail.com</p>
-  <p>LinkedIn: linkedin.com/in/geetanjalideshmukh</p>
-  <p>GitHub: github.com/Geetanjali-Deshmukh</p>
+
+
+
+
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+
+    <div class="modal-section">
+      <h4>Tech Stack</h4>
+      <p id="modalTech"></p>
+    </div>
+
+    <div class="modal-section">
+      <h4>My Contribution</h4>
+      <p id="modalRole"></p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Description</h4>
+      <p id="modalImpact"></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="certifications" class="reveal">
+  <h2>Certifications</h2>
+
+  <!-- Certificate 1 -->
+  <div class="project" onclick="toggleCert('cert1')">
+    <h3>Introduction to ASP.NET Core</h3>
+    <p>Great Learning Support • July 2021</p>
+
+    <div id="cert1" class="cert-details">
+      <p><b>Technology:</b> ASP.NET Core</p>
+      <p>Gained foundational knowledge of ASP.NET Core framework for building modern, scalable, and high-performance web applications.</p>
+      <p>Learned MVC architecture, routing, middleware, dependency injection, Razor Pages, REST APIs, Entity Framework Core, authentication and security.</p>
+    </div>
+  </div>
+
+  <!-- Certificate 2 -->
+  <div class="project" onclick="toggleCert('cert2')">
+    <h3>Full Stack Development Certification</h3>
+    <p>TestBook Skill Academy • May 2024</p>
+
+    <div id="cert2" class="cert-details">
+      <p><b>Technologies:</b> HTML, CSS, JavaScript, DSA, Node.js, Express.js, MongoDB, React.js</p>
+      <p>Built frontend using React, responsive UI with HTML/CSS, backend APIs using Node.js & Express, integrated MongoDB database, applied DSA for optimization and deployed real-world projects.</p>
+    </div>
+  </div>
+
+  <!-- Certificate 3 -->
+  <div class="project" onclick="toggleCert('cert3')">
+    <h3>Python Programming with GUI & Database</h3>
+    <p>AIM Point Infosystem • May 2021 – Sep 2021</p>
+
+    <div id="cert3" class="cert-details">
+      <p>Learned Python fundamentals, OOP, Tkinter GUI development, MySQL integration, CRUD operations, exception handling, modular coding and built mini-projects.</p>
+    </div>
+  </div>
+
+  <!-- Certificate 4 -->
+  <div class="project" onclick="toggleCert('cert4')">
+    <h3>C Programming Language</h3>
+    <p>AIM Point Infosystem • March 2021</p>
+
+    <div id="cert4" class="cert-details">
+      <p>Learned core C programming concepts, memory management, pointers, control structures, functions and problem solving.</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="contact" class="reveal">
+  <h2>Profile Details</h2>
+  <!-- <a href="mailto:dgeetanjali848@gmail.com" class="contactBtn">Send Email</a> -->
+  <p><a href="https://linkedin.com/in/geetanjalideshmukh" target="_blank">View My LinkedIn Profile</a></p>
+  <p><a href="https://github.com/Geetanjali-Deshmukh" target="_blank">View My GitHub →</a></p>
+</section> 
+
+
+
+<!-- <section id="github" class="reveal">
+  <h2>GitHub Projects</h2>
+  <div id="repoContainer"></div>
 </section> -->
 
-<section>
-  <h2>Contact</h2>
 
-  <p>
-    📧 Email:
-    <a href="mailto:dgeetanjali848@gmail.com">
-      dgeetanjali848@gmail.com
-    </a>
-  </p>
 
-  <p>
-    🔗 LinkedIn:
-    <a href="https://www.linkedin.com/in/geetanjalideshmukh/" target="_blank">
-      linkedin.com/in/geetanjalideshmukh
-    </a>
-  </p>
+<section id="cta" class="reveal" style="text-align:center;">
+  <h2>Let's Work Together</h2>
 
-  <p>
-    💻 GitHub:
-    <a href="https://github.com/Geetanjali-Deshmukh" target="_blank">
-      github.com/Geetanjali-Deshmukh
-    </a>
-  </p>
+  <a href="resume.pdf" download class="resumeBtn">Download Resume</a>
+  <br><br>
+  <a href="mailto:dgeetanjali848@gmail.com" class="contactBtn">Contact Me</a>
+
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
 </section>
+
+
+
+
+
+<!-- <section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+
+  <form action="mailto:dgeetanjali848@gmail.com" method="post" enctype="text/plain">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+
+<canvas id="bg"></canvas>
+
+<script>
+  const canvas = document.getElementById("bg");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let particles = [];
+
+  for (let i = 0; i < 60; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 2 + 1,
+      d: Math.random() * 1
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "rgba(37,99,235,0.15)";
+    ctx.beginPath();
+
+    for (let i = 0; i < particles.length; i++) {
+      let p = particles[i];
+      ctx.moveTo(p.x, p.y);
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+    }
+
+    ctx.fill();
+    update();
+  }
+
+  function update() {
+    for (let i = 0; i < particles.length; i++) {
+      let p = particles[i];
+      p.y += p.d;
+      if (p.y > canvas.height) {
+        p.y = 0;
+        p.x = Math.random() * canvas.width;
+      }
+    }
+  }
+
+  setInterval(draw, 30);
+</script>
+
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        const yOffset = -80; // navbar height adjust
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    });
+  });
+</script>
+
+
+<script>
+  /* Progress Bar + Navbar Shadow */
+  window.onscroll = function () {
+    const scrollTop = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (scrollTop / height) * 100;
+    document.getElementById("progressBar").style.width = progress + "%";
+
+    // Navbar shadow
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", scrollTop > 10);
+
+    // Back to top button
+    document.getElementById("topBtn").style.display = scrollTop > 300 ? "block" : "none";
+
+    // Active menu highlight
+    document.querySelectorAll("section").forEach(section => {
+      const top = scrollTop + 120;
+      if (top >= section.offsetTop && top < section.offsetTop + section.offsetHeight) {
+        document.querySelectorAll(".navbar a").forEach(a => a.classList.remove("active"));
+        const link = document.querySelector(`.navbar a[href="#${section.id}"]`);
+        if (link) link.classList.add("active");
+      }
+    });
+  };
+
+  /* Mobile Menu */
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+
+  /* Scroll to top */
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+<script>
+  const roles = [".NET Developer", "Full Stack Developer", "Software Engineer"];
+  let k = 0, j = 0, current = "", isDeleting = false;
+
+  function type() {
+    current = roles[k];
+    if (isDeleting) {
+      document.getElementById("typing").textContent = current.substring(0, j--);
+      if (j < 0) { isDeleting = false; k = (k + 1) % roles.length; }
+    } else {
+      document.getElementById("typing").textContent = current.substring(0, j++);
+      if (j > current.length) { isDeleting = true; setTimeout(type, 1200); return; }
+    }
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+  type();
+</script>
+
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+
+<script>
+  // https://github.com/Geetanjali-Deshmukh
+  fetch("https://api.github.com/users/Geetanjali-Deshmukh/repos")
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("repoContainer");
+      data.slice(0,6).forEach(repo => {
+        container.innerHTML += `
+          <div class="repoCard">
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "No description"}</p>
+            <a href="${repo.html_url}" target="_blank">View Repo</a>
+          </div>`;
+      });
+    });
+</script>
+
+<script>
+  function openModal(title, desc) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDesc").innerText = desc;
+  }
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
+
+<script>
+  let skillsPlayed = false;
+
+  window.addEventListener("scroll", () => {
+    const section = document.querySelector("#skills, #tech");
+    
+    if (!section) return;
+
+    const top = section.getBoundingClientRect().top;
+
+    if (!skillsPlayed && top < window.innerHeight - 100) {
+
+      document.querySelectorAll(".circle").forEach(circle => {
+        const percent = circle.dataset.percent;
+        const progress = circle.querySelector(".progress");
+        const number = circle.querySelector(".number");
+
+        const radius = 45;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (percent / 100) * circumference;
+
+        progress.style.strokeDashoffset = offset;
+
+        let count = 0;
+        let speed = percent / 40;
+
+        const counter = setInterval(() => {
+          count += speed;
+          if (count >= percent) {
+            number.innerText = percent + "%";
+            clearInterval(counter);
+          } else {
+            number.innerText = Math.floor(count) + "%";
+          }
+        }, 30);
+      });
+
+      skillsPlayed = true;
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+</script>
+
+<script>
+  function openModal(title, desc, tech, features, role, github, live) {
+
+    document.getElementById("modal").style.display = "block";
+
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDesc").innerText = desc;
+    document.getElementById("modalTech").innerText = tech;
+    document.getElementById("modalRole").innerText = role;
+
+    // Features list
+    const list = document.getElementById("modalFeatures");
+    list.innerHTML = "";
+    features.forEach(f => {
+      const li = document.createElement("li");
+      li.innerText = f;
+      list.appendChild(li);
+    });
+
+    // Links
+    document.getElementById("modalGithub").href = github || "#";
+    document.getElementById("modalLive").href = live || "#";
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
+
+
+<script>
+  function openModal(title, desc, tech, role, impact) {
+    document.getElementById("projectModal").style.display = "block";
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDesc").innerText = desc;
+    document.getElementById("modalTech").innerText = tech;
+    document.getElementById("modalRole").innerText = role;
+    document.getElementById("modalImpact").innerText = impact;
+  }
+
+  function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("projectModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+</script>
+
+
+
+
+<script>
+function toggleCert(id) {
+  const certBox = document.getElementById(id);
+  const parent = certBox.parentElement;
+
+  if (parent.classList.contains("active")) {
+    parent.classList.remove("active");
+  } else {
+    // close all first
+    document.querySelectorAll(".project").forEach(p => p.classList.remove("active"));
+    parent.classList.add("active");
+  }
+}
+</script>
+
+
+
+<svg width="0" height="0">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+</svg>
 
 
 </body>
